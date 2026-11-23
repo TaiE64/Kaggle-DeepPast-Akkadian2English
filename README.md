@@ -12,7 +12,7 @@
 
 **[English](README.md) · [简体中文](README.zh-CN.md)**
 
-[Competition](https://www.kaggle.com/competitions/deep-past-initiative-machine-translation) · [Inference notebooks](submission/README.md) · [Data-format notes](data_format_rules.md) · [Configuration notes](params.md)
+[🤗 Model weights](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000) · [Best-scoring output](#best-scoring-notebook-output) · [Competition](https://www.kaggle.com/competitions/deep-past-initiative-machine-translation) · [Inference notebooks](submission/README.md) · [Data-format notes](data_format_rules.md) · [Configuration notes](params.md)
 
 </div>
 
@@ -31,7 +31,33 @@ The useful work here goes beyond a model call: extracting parallel text from sch
 | Data work | PDF extraction, text normalization, filtering, deduplication, and sentence-level resources |
 | Evaluation | Corpus-level geometric mean of BLEU and chrF++ |
 
-The rank and medal are the author's recorded competition results. This repository preserves experiment artifacts; it does not yet identify a particular notebook/checkpoint pair as the exact final ranked submission.
+The rank and medal are the author's recorded competition results. The submission scores and notebook links below were checked through the authenticated Kaggle API; a highest score across submissions does not by itself establish which submission was selected for the final leaderboard.
+
+## Best-scoring notebook output
+
+The authenticated Kaggle API returned **107 submissions** for this competition. Their highest Public and Private scores come from different submissions:
+
+| Selection | Notebook | Public score | Private score |
+|---|---|---:|---:|
+| **Highest Private score** | [infer-v4-14000](https://www.kaggle.com/code/yuanchuan64/infer-v4-14000?scriptVersionId=302448234) | 36.9959 | **39.4779** |
+| Highest Public score | [akkadian-baseline-ref](https://www.kaggle.com/code/yuanchuan64/akkadian-baseline-ref?scriptVersionId=302745772) | **38.5569** | 39.1302 |
+
+![Archived output from the highest-Private-score notebook](media/kaggle-v4-14000-output.png)
+
+*Original Kaggle execution output and predictions, rendered locally for readability. The four examples are from the notebook's public example run, not the hidden evaluation set. Notebook links may require access because the originals are private. [Output CSV](media/evidence/v4-14000-preview.csv) · [Log excerpt](media/evidence/v4-14000-output.txt) · [Score and version provenance](media/evidence/provenance.json).*
+
+## Download the checkpoint
+
+**[🤗 TaiE64/OA2Eng-ByT5XL-V4-14000](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000)** is publicly available without gated access. It contains approximately **3.74B parameters**, BF16 safetensors weights, and model/tokenizer configuration files; the download is approximately **7.5 GB**.
+
+```bash
+python -m pip install huggingface_hub
+hf download TaiE64/OA2Eng-ByT5XL-V4-14000 \
+  --revision f328700ddf5095623bb5903105e41b4b8d36da3f \
+  --local-dir ./models/OA2Eng-ByT5XL-V4-14000
+```
+
+Point `UltraConfig.model_path` at the downloaded folder, or attach it as a Kaggle model dataset for offline inference. This owner-provided V4-14000 release matches the version naming of the highest-Private-score notebook's `akkadian-v4-14000` dataset; binary equality between those artifacts has not been checked. It is a separate checkpoint from the archived `fft5400` notebook's default. See the [setup guide](submission/README.md#public-hugging-face-checkpoint).
 
 ## The challenge
 
@@ -71,7 +97,7 @@ flowchart LR
     P --> S[submission.csv]
 ```
 
-The data helpers and inference notebooks are available here. Training is represented by [notes](params.md); the full trainer and model weights are not included.
+The data helpers and inference notebooks are available here. Training is represented by [notes](params.md); the full trainer is not included, and model weights are published separately on [Hugging Face](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000).
 
 ## Start here
 
@@ -117,7 +143,7 @@ The checked-in `merged_all.csv` contains **69,211 rows**. That is the size of th
 
 ## Reproduction notes
 
-- **Bring the matching weights.** The Kaggle dataset names are recorded in notebook metadata, but weights are not stored in this Git repository and access to those datasets must be available separately.
+- **Download the released weights.** The [V4-14000 checkpoint](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000) is public on Hugging Face. Other archived notebooks target different Kaggle datasets; check the model path before running.
 - **Read source, not just saved output.** The notebooks retain older execution logs, including paths/settings that differ from the current source. Run a fresh session to obtain current results.
 - **Check large-file contents.** Several PDFs and large CSVs are Git LFS pointer files in a fresh checkout; resolve the assets before using extraction scripts. The published notebook can be inspected without those PDFs.
 - **Review helper paths.** Some data-cleaning scripts retain original Windows paths and write CSVs in place. Adapt the paths and work on a copy when exploring them.

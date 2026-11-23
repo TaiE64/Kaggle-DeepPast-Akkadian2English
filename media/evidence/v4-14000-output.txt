@@ -1,0 +1,26 @@
+📊 VALIDATION REPORT
+============================================================
+
+Empty: 0 (0.00%)
+
+📏 Length stats:
+   Mean: 193.5, Median: 171.5
+   Min: 132, Max: 299
+
+📝 Sample translations:
+   ID    0: From the Kanesh colony to the datum-payers, our messenger, every colon...
+   ID    1: In accordance with the tablet of the City, whoever buys meteoric iron ...
+   ID    2: As soon as you have heard our letter, whether he has sold it to a pala...
+
+============================================================
+
+
+============================================================
+🎉 ULTRA-OPTIMIZED INFERENCE COMPLETE!
+============================================================
+Submission file: /kaggle/working/submission.csv
+Config file: /kaggle/working/ultra_config.json
+Log file: /kaggle/working/inference_ultra.log
+Total translations: 4
+============================================================
+Submission shape: (4, 2)

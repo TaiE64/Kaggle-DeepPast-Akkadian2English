@@ -9,7 +9,7 @@
 [![Kaggle: Silver Medal](https://img.shields.io/badge/Kaggle-Silver_Medal-C0C0C0?logo=kaggle&logoColor=white)](https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/leaderboard)
 [![Final rank: 18th](https://img.shields.io/badge/Final_Rank-18th-20BEFF)](https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/leaderboard)
 
-[English](README.md) · **简体中文** · [比赛主页](https://www.kaggle.com/competitions/deep-past-initiative-machine-translation) · [推理运行指南](submission/README.md)
+[English](README.md) · **简体中文** · [🤗 模型权重](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000) · [比赛主页](https://www.kaggle.com/competitions/deep-past-initiative-machine-translation) · [推理运行指南](submission/README.md)
 
 </div>
 
@@ -28,7 +28,33 @@
 | 可选实验 | 基于 chrF++ 风格相似度的 MBR 候选选择；当前默认关闭 |
 | 评估指标 | 语料级 BLEU 与 chrF++ 的几何平均 |
 
-成绩沿用原仓库的作者记录；目前归档尚未明确标注哪一个 notebook 与 checkpoint 组合对应最终排名提交。
+排名与奖牌沿用作者记录；下方分数和 notebook 版本已通过登录后的 Kaggle API 核对。所有提交中的最高分，不等同于确认该条提交被选入最终榜单。
+
+## 最高分 notebook 的真实输出
+
+已核对本场比赛的 **107 条提交**。Public 与 Private 最高分来自不同提交：
+
+| 记录 | Notebook | Public | Private |
+|---|---|---:|---:|
+| **Private 最高分** | [infer-v4-14000](https://www.kaggle.com/code/yuanchuan64/infer-v4-14000?scriptVersionId=302448234) | 36.9959 | **39.4779** |
+| Public 最高分 | [akkadian-baseline-ref](https://www.kaggle.com/code/yuanchuan64/akkadian-baseline-ref?scriptVersionId=302745772) | **38.5569** | 39.1302 |
+
+![最高 Private 分版本的 Kaggle 原始运行输出](media/kaggle-v4-14000-output.png)
+
+*图中内容取自 Kaggle 保存的原始日志和预测 CSV，在本地排版渲染；不是 Kaggle 网页截图。展示的是 4 条公开样例，非隐藏评估集。原 notebook 为私有，访问链接可能需要权限。[原始预测 CSV](media/evidence/v4-14000-preview.csv) · [日志片段](media/evidence/v4-14000-output.txt) · [分数与版本记录](media/evidence/provenance.json)。*
+
+## 下载公开模型
+
+**[🤗 TaiE64/OA2Eng-ByT5XL-V4-14000](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000)** 已公开，无需申请访问。仓库包含约 **3.74B 参数**的 BF16 safetensors 权重以及模型、tokenizer 配置，下载约 **7.5 GB**。
+
+```bash
+python -m pip install huggingface_hub
+hf download TaiE64/OA2Eng-ByT5XL-V4-14000 \
+  --revision f328700ddf5095623bb5903105e41b4b8d36da3f \
+  --local-dir ./models/OA2Eng-ByT5XL-V4-14000
+```
+
+将 notebook 的 `UltraConfig.model_path` 指向下载目录，或把模型挂载为 Kaggle 数据集后离线推理。HF 发布版本与最高 Private 分 notebook 使用的数据集名称均为 V4-14000，但未做二进制一致性校验；它与归档中 `fft5400` 的默认 checkpoint 是不同版本。
 
 ## 这道题难在哪里？
 
@@ -64,7 +90,7 @@ cd KaggleDeepPast-Challenge-Akkadian2English-LB18th
 3. 运行新会话，检查生成的 `submission.csv`、配置和日志。
 4. 想理解数据侧处理，接着看 [格式规则](data_format_rules.md) 与 [参数记录](params.md)。
 
-模型权重和完整训练程序未包含在本仓库；训练部分目前保留的是参数笔记。当前归档适合阅读、分析和适配，完整复现最终成绩还需要匹配的训练与提交资产。
+模型权重已单独发布在 [Hugging Face](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000)；Git 仓库未包含完整训练程序，训练部分目前保留的是参数笔记。当前归档适合阅读、分析和适配，完整复现最终成绩还需要匹配的训练与提交资产。
 
 ## 目录导航
 
