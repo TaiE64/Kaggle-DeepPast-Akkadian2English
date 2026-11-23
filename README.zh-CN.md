@@ -18,7 +18,9 @@
 
 ## 直接看翻译效果
 
-![OA 原文与模型英文译文左右对照](media/kaggle-v4-14000-output.png)
+**左栏：OA 原文（拉丁字母转写）｜右栏：模型英文译文**
+
+![OA 原文与模型英文译文左右对照](media/oa-english-side-by-side.png)
 
 *四条公开样例，按 ID 对齐 OA 原文与 `infer-v4-14000` 的真实输出，译文未改写。[文字版](media/evidence/v4-14000-parallel-preview.csv) · [Kaggle 运行版本](https://www.kaggle.com/code/yuanchuan64/infer-v4-14000?scriptVersionId=302448234) · [成绩记录](media/evidence/provenance.json)。*
 

@@ -18,7 +18,9 @@ My silver-medal project for translating **Old Assyrian Akkadian transliterations
 
 ## See the translations
 
-![Old Assyrian source text and actual English predictions, side by side](media/kaggle-v4-14000-output.png)
+**Left: original OA transliteration · Right: English prediction**
+
+![Old Assyrian source text and actual English predictions, side by side](media/oa-english-side-by-side.png)
 
 *Four public examples from `infer-v4-14000`, paired by ID with their original OA text. Predictions are unchanged. [Text version](media/evidence/v4-14000-parallel-preview.csv) · [Kaggle run](https://www.kaggle.com/code/yuanchuan64/infer-v4-14000?scriptVersionId=302448234) · [Score provenance](media/evidence/provenance.json).*
 
