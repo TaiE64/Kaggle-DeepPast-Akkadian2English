@@ -1,8 +1,8 @@
 <div align="center">
 
-# Kaggle Deep Past — 第 18 名 🥈
+# Kaggle Deep Past Challenge：阿卡德语 → 英语
 
-### 阿卡德语 → 英语 · 开放 ByT5-XL 模型权重
+### 🥈 第 18 名 · 银牌 · 开放 ByT5-XL 模型权重
 
 **最高榜位：第 3 名 · 最终 Private 分：39.1357**
 

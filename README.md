@@ -1,8 +1,8 @@
 <div align="center">
 
-# Kaggle Deep Past — 18th Place 🥈
+# Kaggle Deep Past Challenge: Akkadian → English
 
-### Akkadian → English · Open ByT5-XL Model
+### 🥈 18th Place · Silver Medal · Open ByT5-XL Model
 
 **Peak leaderboard: #3 · Final Private score: 39.1357**
 
