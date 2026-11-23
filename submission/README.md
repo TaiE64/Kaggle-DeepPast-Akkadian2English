@@ -8,7 +8,15 @@ This directory contains two Kaggle inference notebooks and archived runtime asse
 
 The owner has published **[TaiE64/OA2Eng-ByT5XL-V4-14000](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000)**. It is accessible without login and includes `model.safetensors`, `config.json`, `generation_config.json`, and `tokenizer_config.json`.
 
-Download with the pinned command in the [main README](../README.md#download-the-checkpoint), then set `UltraConfig.model_path` to that folder. For an offline Kaggle run, download beforehand and attach the model files as a dataset. Keep the notebook's generation limits and preprocessing; the checkpoint's saved generation configuration alone is not the competition recipe.
+For an exact model snapshot:
+
+```bash
+hf download TaiE64/OA2Eng-ByT5XL-V4-14000 \
+  --revision f328700ddf5095623bb5903105e41b4b8d36da3f \
+  --local-dir ./models/OA2Eng-ByT5XL-V4-14000
+```
+
+Set `UltraConfig.model_path` to that folder. For an offline Kaggle run, download beforehand and attach the model files as a dataset. Keep the notebook's generation limits and preprocessing; the checkpoint's saved generation configuration alone is not the competition recipe.
 
 The final leaderboard records **JoJoImpact, rank 18, score 39.1357**. Separately, the highest Private score among the 107 retrieved submissions is **39.4779**, from [infer-v4-14000, script version 302448234](https://www.kaggle.com/code/yuanchuan64/infer-v4-14000?scriptVersionId=302448234), with Public score **36.9959**. The Kaggle API exposes this notebook as version 1. Its dataset name is `yuanchuan64/akkadian-v4-14000`; the HF artifact is owner-provided with matching version naming, without a binary-identity check. The notebook is currently private, while the HF model and [archived output preview](../media/evidence/v4-14000-preview.csv) are publicly available.
 
@@ -75,3 +83,9 @@ The committed CSV in `BackUp_Submission/` is an archived prediction artifact. It
 With `use_mbr=True`, the notebook can generate a candidate pool using beams and optional sampling, then choose a translation using an inline chrF++-style sentence-similarity function. Candidate counts and sampling settings are exposed as `mbr_*` fields.
 
 This helper is distinct from the official corpus-level BLEU/chrF++ competition evaluation. Both notebooks and the saved backup configuration have MBR disabled by default. Any effect on quality or runtime needs a separate evaluation with fixed data and model weights.
+
+## Data and attribution notes
+
+The archived `merged_all.csv` has 69,211 rows; this is not a statement that every row was used in the final training run. Extraction outputs may overlap. Some data scripts retain original Windows paths and write CSVs in place, and many large PDFs/CSVs are LFS pointers in a fresh checkout.
+
+Third-party datasets, publications, models, and dependency assets retain their own terms and attribution. No repository-wide code license is currently specified.

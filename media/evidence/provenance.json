@@ -22,7 +22,7 @@
   "preview_version": 1,
   "preview_rows": 4,
   "preview_scope": "Public example run; not the hidden evaluation outputs.",
-  "screenshot_method": "Local browser rendering of archived Kaggle CLI logs and output CSV; not a screenshot of the Kaggle website.",
+  "screenshot_method": "Local browser rendering of paired source transliterations and archived Kaggle prediction CSV; original wording preserved.",
   "model_repository": "TaiE64/OA2Eng-ByT5XL-V4-14000",
   "model_revision": "f328700ddf5095623bb5903105e41b4b8d36da3f",
   "model_identity_note": "Owner-provided HF checkpoint; version naming matches the Kaggle dataset, but binary equality has not been verified.",
@@ -35,5 +35,7 @@
     "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/leaderboard",
     "source": "Authenticated Kaggle competition leaderboard API, first page, 50 rows",
     "checked_at": "2026-11-23"
-  }
+  },
+  "parallel_source": "data/competition/test.csv; rows matched to output by id",
+  "parallel_preview": "v4-14000-parallel-preview.csv"
 }
