@@ -26,5 +26,14 @@
   "model_repository": "TaiE64/OA2Eng-ByT5XL-V4-14000",
   "model_revision": "f328700ddf5095623bb5903105e41b4b8d36da3f",
   "model_identity_note": "Owner-provided HF checkpoint; version naming matches the Kaggle dataset, but binary equality has not been verified.",
-  "preview_sha256": "66162cc560880391a92ac3bd69b4a401a94714c64de870776ece692856be3524"
+  "preview_sha256": "66162cc560880391a92ac3bd69b4a401a94714c64de870776ece692856be3524",
+  "final_leaderboard": {
+    "rank": 18,
+    "teamId": 15302824,
+    "teamName": "JoJoImpact",
+    "score": "39.1357",
+    "url": "https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/leaderboard",
+    "source": "Authenticated Kaggle competition leaderboard API, first page, 50 rows",
+    "checked_at": "2026-11-23"
+  }
 }

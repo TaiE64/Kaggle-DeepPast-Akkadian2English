@@ -24,18 +24,18 @@ The useful work here goes beyond a model call: extracting parallel text from sch
 
 | Result / artifact | Details |
 |---|---|
-| Final leaderboard | **18th · Silver medal** |
+| Final leaderboard | **18th · Silver medal · Private score 39.1357** |
 | Highest leaderboard position | **3rd** |
 | Task | Old Assyrian Akkadian transliteration → English |
 | Model entry point | ByT5-XL checkpoint inference notebook, plus a backup notebook |
 | Data work | PDF extraction, text normalization, filtering, deduplication, and sentence-level resources |
 | Evaluation | Corpus-level geometric mean of BLEU and chrF++ |
 
-The rank and medal are the author's recorded competition results. The submission scores and notebook links below were checked through the authenticated Kaggle API; a highest score across submissions does not by itself establish which submission was selected for the final leaderboard.
+The [final leaderboard](https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/leaderboard), checked through the Kaggle API, lists **JoJoImpact at rank 18 with score 39.1357**. The silver medal and peak rank follow the author's record. The highest individual Private score below is a different record from the score counted on the final leaderboard.
 
 ## Best-scoring notebook output
 
-The authenticated Kaggle API returned **107 submissions** for this competition. Their highest Public and Private scores come from different submissions:
+The authenticated Kaggle API returned **107 submissions** for this competition. Their highest Public and Private scores come from different submissions. **The final leaderboard score is 39.1357; the individual best of 39.4779 was not the score used for the final rank.**
 
 | Selection | Notebook | Public score | Private score |
 |---|---|---:|---:|

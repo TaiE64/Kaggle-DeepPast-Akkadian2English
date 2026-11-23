@@ -2,7 +2,7 @@
 
 [Project overview](README.md) · [Notebook setup](submission/README.md)
 
-This file separates the short original training notes from settings that can be read directly from the checked-in inference notebooks. The full training program is not included in this repository. A V4-14000 checkpoint is published separately on [Hugging Face](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000); the exact final leaderboard selection is not established by these notes.
+This file separates the short original training notes from settings that can be read directly from the checked-in inference notebooks. The full training program is not included in this repository. A V4-14000 checkpoint is published separately on [Hugging Face](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000); the final leaderboard score is 39.1357, distinct from the V4-14000 submission's individual Private score of 39.4779.
 
 ## Original training notes
 

@@ -10,7 +10,7 @@ The owner has published **[TaiE64/OA2Eng-ByT5XL-V4-14000](https://huggingface.co
 
 Download with the pinned command in the [main README](../README.md#download-the-checkpoint), then set `UltraConfig.model_path` to that folder. For an offline Kaggle run, download beforehand and attach the model files as a dataset. Keep the notebook's generation limits and preprocessing; the checkpoint's saved generation configuration alone is not the competition recipe.
 
-The highest Private score among the 107 retrieved submissions is **39.4779**, from [infer-v4-14000, script version 302448234](https://www.kaggle.com/code/yuanchuan64/infer-v4-14000?scriptVersionId=302448234), with Public score **36.9959**. The Kaggle API exposes this notebook as version 1. Its dataset name is `yuanchuan64/akkadian-v4-14000`; the HF artifact is owner-provided with matching version naming, without a binary-identity check. The notebook is currently private, while the HF model and [archived output preview](../media/evidence/v4-14000-preview.csv) are publicly available.
+The final leaderboard records **JoJoImpact, rank 18, score 39.1357**. Separately, the highest Private score among the 107 retrieved submissions is **39.4779**, from [infer-v4-14000, script version 302448234](https://www.kaggle.com/code/yuanchuan64/infer-v4-14000?scriptVersionId=302448234), with Public score **36.9959**. The Kaggle API exposes this notebook as version 1. Its dataset name is `yuanchuan64/akkadian-v4-14000`; the HF artifact is owner-provided with matching version naming, without a binary-identity check. The notebook is currently private, while the HF model and [archived output preview](../media/evidence/v4-14000-preview.csv) are publicly available.
 
 ## Choose a notebook
 

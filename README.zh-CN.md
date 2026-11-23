@@ -21,18 +21,18 @@
 
 | 方面 | 内容 |
 |---|---|
-| 比赛成绩 | 最终 **18th / Silver**，最高榜位 **3rd** |
+| 比赛成绩 | 最终 **18th / Silver**，最终 Private 分 **39.1357**；最高榜位 **3rd** |
 | 模型入口 | ByT5-XL checkpoint 推理 notebook，以及备用 notebook |
 | 数据工程 | PDF 对译提取、字符与残缺标记规范化、过滤、去重、句子级资源 |
 | 推理实现 | Beam search、按长度分桶、生成参数控制、结果检查与后处理 |
 | 可选实验 | 基于 chrF++ 风格相似度的 MBR 候选选择；当前默认关闭 |
 | 评估指标 | 语料级 BLEU 与 chrF++ 的几何平均 |
 
-排名与奖牌沿用作者记录；下方分数和 notebook 版本已通过登录后的 Kaggle API 核对。所有提交中的最高分，不等同于确认该条提交被选入最终榜单。
+已通过 Kaggle API 核对[最终榜单](https://www.kaggle.com/competitions/deep-past-initiative-machine-translation/leaderboard)：**JoJoImpact 第 18 名，最终计分 39.1357**。银牌与最高榜位沿用作者记录。下方的单次最高 Private 分是另一项记录，不是最终榜单采用的分数。
 
 ## 最高分 notebook 的真实输出
 
-已核对本场比赛的 **107 条提交**。Public 与 Private 最高分来自不同提交：
+已核对本场比赛的 **107 条提交**。Public 与 Private 最高分来自不同提交。**最终榜单使用 39.1357；单次最高的 39.4779 并未作为最终排名分数。**
 
 | 记录 | Notebook | Public | Private |
 |---|---|---:|---:|
