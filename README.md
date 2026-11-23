@@ -1,10 +1,9 @@
 <div align="center">
 
-# Akkadian → English
+# Kaggle Deep Past — 18th Place 🥈
 
-### Translating 4,000-year-old records with ByT5-XL
+### Akkadian → English · Open ByT5-XL Model
 
-**🥈 Kaggle Deep Past Challenge · 18th place · Silver medal**<br>
 **Peak leaderboard: #3 · Final Private score: 39.1357**
 
 [![Model weights](https://img.shields.io/badge/🤗_Hugging_Face-Model_Weights-ffd21e)](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000)

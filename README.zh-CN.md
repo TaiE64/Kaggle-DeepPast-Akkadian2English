@@ -1,10 +1,9 @@
 <div align="center">
 
-# 阿卡德语 → 英语
+# Kaggle Deep Past — 第 18 名 🥈
 
-### 用 ByT5-XL，读懂四千年前的商业文书
+### 阿卡德语 → 英语 · 开放 ByT5-XL 模型权重
 
-**🥈 Kaggle Deep Past Challenge · 最终第 18 名 · 银牌**<br>
 **最高榜位：第 3 名 · 最终 Private 分：39.1357**
 
 [![Model weights](https://img.shields.io/badge/🤗_Hugging_Face-Model_Weights-ffd21e)](https://huggingface.co/TaiE64/OA2Eng-ByT5XL-V4-14000)
